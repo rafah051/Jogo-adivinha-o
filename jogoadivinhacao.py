@@ -8,22 +8,24 @@ print('*********************************')
 numeroSecreto = random.randrange(1,101) 
 #print(numeroSecreto)
 #Definindo o número de tentativas e rodada
-numeroTentativas = 10
+numeroTentativas = 0
 rodada = 1
+pontuação = 1000
 
 print("Qual o nível de dificuldade?")
 print("(1)-Fácil, (2)-Médio, (3)-Difícil, (4)-Impossível")
 
 nivel = int(input("Defina o nível: "))
 
-if(nivel == 1):
-    numeroTentativas = 20
-elif(nivel == 2):
+if(nivel == 1){
+    numeroTentativas = 20;
+}elif(nivel == 2){
     numeroTentativas = 15
-elif(nivel == 3):
+}elif(nivel == 3):{
     numeroTentativas = 10
-else:
-    numeroTentativas = 5    
+}else{
+    numeroTentativas = 5   
+}
 
 
 while(rodada <= numeroTentativas):
@@ -41,6 +43,9 @@ while(rodada <= numeroTentativas):
         print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!! O número secreto é um número maior')
+
+pontos_perdidos = abs(numeroSecreto - chute);
+pontuação = pontuação - pontos_perdidos
 
     #numeroTentativas = numeroTentativas - 1
     rodada = rodada + 1
