@@ -14,9 +14,11 @@ def jogar_forca():
         
         chute = input ('Qual a letra?')
 
+        index = 0 
         for letra in palavraSecreta:
-            if (chute == letra):
-                print(letra)
+            if(chute == letra):
+                print("Encontrei a letra {} na posição {}".format(letra, index))
+            index = index + 1  
         print("Jogando....")
 
 
